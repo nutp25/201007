@@ -2,6 +2,12 @@
 <html>
 <head>
 	<title>Page 2</title>
+	<script>
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const user_name = urlParams.get('user_name');
+		const password = urlParams.get('password')
+	</script>
 </head>
 <body>
 <div class="header" style="display: flex; align-items: center; justify-content: center;">
@@ -19,6 +25,22 @@
 	<div class="item" style="flex: 0 0 50%; text-align: center">
 		<a href="200710_page3.html">User Managerment</a>
 	</div>
+</div>
+<div class="content">
+	<table>
+		<thead>
+			<th>
+				<strong>User Name</strong>
+			</th>
+			<th>
+				<strong>Password</strong>
+			</th>
+		</thead>
+		<tbody>
+			<td id="user_name"></td>
+			<td id="password"></td>
+		</tbody>
+	</table>
 </div>
 </body>
 </html>
